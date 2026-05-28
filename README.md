@@ -68,7 +68,7 @@ Response cached in Redis → returned to user
 ### Installation
 
 ```bash
-git clone https://github.com/BahaaAldein10/Aoun-AI.git
+git clone https://github.com/bahaa-aldein/Aoun-AI.git
 cd Aoun-AI
 npm install
 ```
