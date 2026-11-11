@@ -13,7 +13,7 @@ A full-stack SaaS platform for building, training, and deploying AI-powered chat
 - **Multi-channel integration** — deploy to websites, WhatsApp, and Facebook Messenger
 - **Subscription billing** — Stripe-powered plans with upgrade/downgrade flows and webhook handling
 - **Admin dashboard** — analytics, lead management, bot monitoring, and usage metrics
-- **Performance** — Redis caching and database indexing cut chatbot response latency by 25%
+- **Performance** — Redis caching of chatbot responses and generated speech audio, plus database indexing
 
 ---
 
@@ -26,7 +26,7 @@ Next.js 15 · React 19 · TypeScript · Tailwind CSS · Radix UI · TanStack Que
 Next.js API Routes · Prisma · MongoDB · Upstash Vector · Upstash Redis
 
 **AI/ML**
-OpenAI GPT · OpenAI Embeddings API · Text-to-speech & voice cloning
+OpenAI GPT · OpenAI Embeddings API · OpenAI text-to-speech
 
 **Integrations**
 Stripe · NextAuth.js · Firebase · Google APIs · Meta APIs · SendPulse
