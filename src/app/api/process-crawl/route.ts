@@ -16,6 +16,10 @@ import puppeteer from "puppeteer-core";
 import robotsParser from "robots-parser";
 
 export const runtime = "nodejs";
+// Crawling can take a while. This used to be configured in vercel.json, but that
+// entry pointed at `app/api/...` while the route lives under `src/app/api/...`,
+// so it never matched. Route segment config is resolved from the file itself.
+export const maxDuration = 60;
 
 const qstash = new QStashClient({ token: process.env.QSTASH_TOKEN! });
 
