@@ -1,7 +1,0 @@
-{
-  "functions": {
-    "app/api/process-crawl/route.ts": {
-      "maxDuration": 60
-    }
-  }
-}
