@@ -32,21 +32,29 @@ export default async function HomeLayout({
   const session = await auth();
   const userId = session?.user?.id;
 
-  const kb = await prisma.knowledgeBase.findFirst({
-    where: {
-      userId,
-    },
-    select: {
-      id: true,
-    },
-  });
+  // The widget is optional: if the lookup fails (for example the database is
+  // briefly unreachable), render the page without it instead of failing.
+  let kbId: string | undefined;
+  try {
+    const kb = await prisma.knowledgeBase.findFirst({
+      where: {
+        userId,
+      },
+      select: {
+        id: true,
+      },
+    });
+    kbId = kb?.id;
+  } catch (error) {
+    console.error("[HomeLayout] knowledge base lookup failed", error);
+  }
 
   return (
     <>
       <Header params={params} />
       {children}
       <Footer params={params} />
-      <VoiceChatFloatingWidget lang={lang} kbId={kb?.id} />
+      <VoiceChatFloatingWidget lang={lang} kbId={kbId} />
     </>
   );
 }
