@@ -2,8 +2,6 @@
 
 A full-stack SaaS platform for building, training, and deploying AI-powered chatbots. Businesses can create intelligent conversational agents, embed them on their websites, connect them to messaging platforms, and manage everything from a single dashboard.
 
-🔗 **Live demo**: https://aoun-ai.vercel.app
-
 ---
 
 ## Features
